@@ -33,3 +33,5 @@ dist/
 build/
 *.egg-info/
 
+# Local planning / design notes (not tracked)
+Plan/
