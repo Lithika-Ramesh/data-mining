@@ -14,11 +14,29 @@ This folder contains a complete GMM (Gaussian Mixture Model) unsupervised learni
 | **QUICK_START.md** | Quick reference guide (3-step execution) |
 | **requirements_gmm.txt** | Python dependencies |
 | **check_environment.py** | Environment validation script |
+| **RUN_IN_CLOUD.md** | Run in cloud (Codespaces, Gitpod, Colab) – full dir links |
 | **README.md** | This file |
 
 ---
 
-## 🚀 Quick Start
+## ☁️ Run in the Cloud (Full Directory)
+
+**One link → whole repo + dependencies in the cloud.**
+
+| Environment | Link | Best for |
+|-------------|------|----------|
+| **GitHub Codespaces** (recommended) | [**Open in Codespaces**](https://codespaces.new/Lithika-Ramesh/data-mining?ref=feat/unsupervised_gmm) | Full directory, VS Code in browser, same as local |
+| **Gitpod** | [**Open in Gitpod**](https://gitpod.io/#https://github.com/Lithika-Ramesh/data-mining/tree/feat/unsupervised_gmm) | Full directory, VS Code–style IDE |
+| **Google Colab** | [**Open in Colab**](https://colab.research.google.com/github/Lithika-Ramesh/data-mining/blob/feat/unsupervised_gmm/gmm_analysis/unsupervised_gmm.ipynb) | Notebook + GPU; first cell clones repo and installs deps |
+
+**Best for “whole dir”:** use **Codespaces** or **Gitpod**.  
+**Best for “just run notebook + GPU”:** use **Colab**.
+
+See **RUN_IN_CLOUD.md** for details and comparison.
+
+---
+
+## 🚀 Quick Start (Local)
 
 ### Step 1: Check Environment
 ```bash
