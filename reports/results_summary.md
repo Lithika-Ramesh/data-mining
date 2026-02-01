@@ -5,18 +5,18 @@
 | Model | Precision | Recall | F1 | ROC-AUC |
 |-------|-----------|--------|----|---------|
 | Dummy (most_frequent) | 0.0000 | 0.0000 | 0.0000 | 0.5000 |
-| LogisticRegression | 0.8938 | 0.9324 | 0.9127 | 0.9706 |
-| RandomForest (tuned) | 0.8955 | 0.9665 | 0.9297 | 0.9778 |
-| DecisionTreeClassifier | 0.8942 | 0.8986 | 0.8964 | 0.9064 |
-| GaussianNB | 0.8470 | 0.9552 | 0.8978 | 0.9585 |
-| GradientBoostingClassifier | 0.8983 | 0.9587 | 0.9275 | 0.9770 |
+| LogisticRegression | 0.8928 | 0.9337 | 0.9128 | 0.9710 |
+| RandomForest (tuned) | 0.8963 | 0.9639 | 0.9289 | 0.9769 |
+| DecisionTreeClassifier | 0.8959 | 0.9002 | 0.8980 | 0.9066 |
+| GaussianNB | 0.8475 | 0.9519 | 0.8967 | 0.9577 |
+| GradientBoostingClassifier | 0.8976 | 0.9571 | 0.9264 | 0.9770 |
 
 ## Key Findings
 
 - **Best Model:** RandomForestClassifier with hyperparameter tuning
-- **Best F1 Score:** 0.9297
-- **Best ROC-AUC:** 0.9778
-- **Improvement over baseline:** F1 improved by 0.4578 (97.0%)
+- **Best F1 Score:** 0.9289
+- **Best ROC-AUC:** 0.9769
+- **Improvement over baseline:** F1 improved by 0.4570 (96.8%)
 
 ## Data Summary
 
@@ -27,14 +27,14 @@
 
 ## Top Features (RandomForest)
 
-1. tma_cma_weighted_score (importance: 0.4826)
-2. total_submissions (importance: 0.3927)
-3. code_module_GGG (importance: 0.0363)
+1. tma_cma_weighted_score (importance: 0.4873)
+2. total_submissions (importance: 0.3881)
+3. code_module_GGG (importance: 0.0364)
 
 ## Error Analysis
 
-- **False Negatives:** 103 (missed at-risk students)
-- **False Positives:** 347 (incorrectly flagged as at-risk)
+- **False Negatives:** 111 (missed at-risk students)
+- **False Positives:** 343 (incorrectly flagged as at-risk)
 
 ## Files Generated
 
