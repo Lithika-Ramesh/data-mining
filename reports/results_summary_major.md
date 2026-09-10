@@ -1,5 +1,7 @@
 # Model Results Summary
 
+> **Target direction:** `final_result` is ordinally encoded (Withdrawn=0, Fail=1, Pass=2, Distinction=3), min-max scaled, and thresholded at `>= 0.5`, so the model's positive class (1) is **Pass/Distinction**, not Fail/Withdrawn. Precision/Recall/F1 below (computed with scikit-learn's default `pos_label=1`) describe how well the model identifies successful students, not at-risk ones directly.
+
 ## Model Performance
 
 | Model | Precision | Recall | F1 | ROC-AUC |
@@ -23,18 +25,18 @@
 - **Total samples:** 32548
 - **Train samples:** 26038
 - **Test samples:** 6510
-- **No student overlap:** ✓ Verified
+- **Split method:** Stratified random split by outcome class
 
 ## Top Features (RandomForest)
 
-1. tma_cma_weighted_score (importance: 0.4826)
-2. total_submissions (importance: 0.3927)
-3. code_module_GGG (importance: 0.0363)
+1. tma_cma_weighted_score (importance: 0.2739)
+2. total_submissions (importance: 0.2632)
+3. activity_diversity_ratio (importance: 0.1399)
 
 ## Error Analysis
 
-- **False Negatives:** 120 (missed at-risk students)
-- **False Positives:** 329 (incorrectly flagged as at-risk)
+- **False Negatives:** 120 (successful students misclassified as at-risk)
+- **False Positives:** 329 (actual at-risk students the model missed)
 
 ## Files Generated
 

@@ -38,8 +38,8 @@ def check_data_files():
     print("\nChecking data files...")
     
     data_files = [
-        '../data/features_unsupervised.csv',
-        '../data/features_supervised.csv'
+        '../../data/final/encoded_unsupervised.csv',
+        '../../data/final/encoded_supervised.csv'
     ]
     
     all_exist = True
@@ -56,13 +56,13 @@ def check_data_files():
 
 def check_reports_directory():
     """Check if reports directory exists"""
-    reports_dir = Path('../reports')
+    reports_dir = Path('../../reports')
     if not reports_dir.exists():
-        print(f"\n[WARN] Creating '../reports/' directory...")
+        print(f"\n[WARN] Creating '../../reports/' directory...")
         reports_dir.mkdir(parents=True, exist_ok=True)
-        print(f"[OK] '../reports/' directory created")
+        print(f"[OK] '../../reports/' directory created")
     else:
-        print(f"\n[OK] '../reports/' directory exists")
+        print(f"\n[OK] '../../reports/' directory exists")
     return True
 
 def main():
@@ -120,8 +120,8 @@ def main():
         
         if not data_ok:
             print("\nData files are missing. Please ensure:")
-            print("  - ../data/features_unsupervised.csv exists")
-            print("  - You're running this script from the gmm_analysis/ directory")
+            print("  - ../../data/final/encoded_unsupervised.csv exists (run the after_merging encoding notebooks first)")
+            print("  - You're running this script from the models/gmm/ directory")
     
     print("\n" + "="*70)
 
